@@ -4,5 +4,5 @@ from num_funs import ispositive
 from num_funs import * 
 
 
-print(nf.iseven(10), ispositive(-10))
+print(nf.iseven(10), ispositive(-10), PI)
 

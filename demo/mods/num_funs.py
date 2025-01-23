@@ -1,3 +1,5 @@
+PI  = 3.14
+
 def ispositive(n):
     return n > 0
 

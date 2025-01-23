@@ -6,3 +6,6 @@ print(sys.path)
 import str_funs
 
 print(str_funs.hasupper('abc'))
+
+print(str_funs.hasupper.__doc__)
+

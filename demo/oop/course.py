@@ -1,5 +1,11 @@
 
 class Course:
+    taxrate = 18
+
+    @staticmethod
+    def gettaxrate():
+        return Course.taxrate
+
     # constructor
     def __init__(self, title, fee, duration = 30):
         # Object Attributes
@@ -13,9 +19,11 @@ class Course:
         print(self.duration)
 
     def getnetfee(self):
-        return self.fee + self.fee * 0.18
+        return self.fee + self.fee * Course.taxrate
 
 
+
+print(Course.gettaxrate())
 
 # create object of Course
 c1 = Course('Data Science', 20000)

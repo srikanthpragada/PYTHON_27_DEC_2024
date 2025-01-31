@@ -15,17 +15,24 @@ class Account:
         self.balance = bal
 
     def deposit(self, amount):
+        if amount <= 0:
+            raise ValueError('Invalid Amount')
+        
         self.balance += amount
 
     def withdraw(self, amount):
         if self.balance - Account.minbal >= amount:
             self.balance -= amount
+        else:
+            raise ValueError('Insufficient Balance')
 
     def getbalance(self):
         return self.balance
 
 
 a1 = Account(1, "Scott", 20000)
+a1.withdraw(50000)
+
 a2 = Account(2, "Mark")
 a1.deposit(10000)
 a1.withdraw(5000)

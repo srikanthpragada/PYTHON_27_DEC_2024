@@ -5,7 +5,8 @@ import json
 import dbutil
 
 f = open("newemployees.json", "rt")
-employees = json.load(f)    # Convert array of JSON objects to list of dict
+# Convert array of JSON objects to list of dict
+employees = json.load(f)
 
 con = sqlite3.connect(dbutil.DBNAME)
 cur = con.cursor()
